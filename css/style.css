@@ -1,0 +1,69 @@
+:root{
+  --bg:#071029;
+  --card:#0f1724;
+  --muted:#9aa6b2;
+  --accent:#0ea5a4;
+  --accent-2:#7c3aed;
+  --white:#f8fafc;
+  --radius:10px;
+  --container:1100px;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#041026 0%, #071029 60%);
+  color:var(--white);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+.container{max-width:var(--container);margin:0 auto;padding:24px}
+
+.site-header{padding:12px 0;background:transparent;position:sticky;top:0;z-index:20}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--white)}
+.logo{width:40px;height:40px}
+.brand-name{font-weight:700;font-size:18px;letter-spacing:0.4px}
+
+.main-nav{display:flex;gap:10px;align-items:center}
+.nav-btn{background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--white);padding:8px 12px;border-radius:8px;cursor:pointer}
+.nav-btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;color:#021018}
+
+.menu-toggle{display:none;background:transparent;border:none;color:var(--white);font-size:20px}
+
+.hero{padding:48px 0}
+.hero-inner{display:flex;gap:32px;align-items:center}
+.hero-left{flex:1}
+.hero-right{flex:1;display:flex;justify-content:center}
+h1{font-size:36px;margin:0 0 12px}
+.lead{color:var(--muted);margin:0 0 18px}
+.features{display:flex;gap:12px;list-style:none;padding:0;margin:0 0 18px}
+.features li{background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:8px;color:var(--muted);font-size:14px}
+
+.cta{display:flex;gap:12px;margin-top:12px}
+button.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:none;color:#021018;padding:10px 16px;border-radius:10px;cursor:pointer}
+button{font:inherit}
+
+.about{padding:28px 24px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-top:1px solid rgba(255,255,255,0.02);border-bottom:1px solid rgba(255,255,255,0.02);margin-top:18px;border-radius:12px}
+
+.site-footer{padding:28px 0;margin-top:28px}
+.footer-inner{display:flex;gap:24px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
+.faq details{background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;margin-bottom:8px}
+.faq summary{cursor:pointer;font-weight:600}
+.legal{color:var(--muted)}
+
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(2,6,23,0.6)}
+.modal.hidden{display:none}
+.modal-content{background:var(--card);padding:20px;border-radius:12px;min-width:320px;max-width:420px;position:relative}
+.modal-close{position:absolute;right:12px;top:12px;background:transparent;border:none;color:var(--muted);cursor:pointer}
+.modal-actions{display:flex;gap:8px;margin-top:12px;justify-content:flex-end}
+
+@media (max-width:900px){
+  .hero-inner{flex-direction:column}
+  .menu-toggle{display:block}
+  .main-nav{display:none}
+}
