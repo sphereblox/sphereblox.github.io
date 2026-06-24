@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SphereBlox — Twórz i graj</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="SphereBlox — platforma do tworzenia gier i doświadczeń 3D z integracjami zewnętrznymi." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <!-- inline SVG logo fallback -->
+        <img src="assets/logo.svg" alt="SphereBlox logo" class="logo" />
+        <span class="brand-name">SphereBlox</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Główne menu">
+        <button class="nav-btn" id="loginBtn">Zaloguj</button>
+        <button class="nav-btn primary" id="signupBtn">Zarejestruj</button>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Otwórz menu">☰</button>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <h1>Twórz, dziel się i graj w świecie SphereBlox</h1>
+        <p class="lead">Platforma do budowania interaktywnych doświadczeń 3D z własnym designem, integracjami i społecznością.</p>
+
+        <ul class="features">
+          <li>Edytor wizualny i skrypty</li>
+          <li>Integracje zewnętrzne i API</li>
+          <li>Bezpieczne konto i społeczność</li>
+        </ul>
+
+        <div class="cta">
+          <button class="primary" id="ctaSignup">Rozpocznij za darmo</button>
+          <button id="ctaExplore">Dowiedz się więcej</button>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="mockup">
+          <!-- prosty placeholder grafiki -->
+          <svg width="320" height="220" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Podgląd platformy">
+            <rect width="320" height="220" rx="12" fill="#0f1724"/>
+            <g fill="#0ea5a4" font-family="sans-serif" font-size="18">
+              <text x="24" y="48">SphereBlox Studio</text>
+              <text x="24" y="84" font-size="12" fill="#cfeff0">Edytor scen 3D · Skrypty · Integracje</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="about container">
+    <h2>O platformie</h2>
+    <p>SphereBlox to nowa generacja platformy do tworzenia gier i doświadczeń społecznościowych. Naszym celem jest dać twórcom narzędzia do szybkiego prototypowania, łatwej publikacji i bezproblemowej integracji z usługami zewnętrznymi.</p>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="faq">
+        <h3>Pomoc i FAQ</h3>
+
+        <details>
+          <summary>Jak założyć konto</summary>
+          <p>Kliknij Zarejestruj, podaj email i hasło lub użyj logowania zewnętrznego. Potwierdź email i zacznij tworzyć.</p>
+        </details>
+
+        <details>
+          <summary>Jak publikować gry</summary>
+          <p>Użyj edytora, zapisz projekt i wybierz Publikuj. Możesz dodać integracje i ustawienia prywatności.</p>
+        </details>
+
+        <details>
+          <summary>Jak dodać integracje zewnętrzne</summary>
+          <p>W panelu projektu znajdziesz sekcję Integracje. Dodaj klucze API i skonfiguruj połączenia.</p>
+        </details>
+      </div>
+
+      <div class="legal">
+        <p>&copy; <span id="year"></span> SphereBlox. Wszelkie prawa zastrzeżone.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">✕</button>
+      <h3 id="modalTitle">Logowanie</h3>
+      <form id="authForm">
+        <label>Email<input type="email" id="email" required /></label>
+        <label>Hasło<input type="password" id="password" required minlength="6" /></label>
+        <div class="modal-actions">
+          <button type="submit" class="primary">Kontynuuj</button>
+          <button type="button" id="switchAuth">Przejdź do rejestracji</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
