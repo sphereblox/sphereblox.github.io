@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-label="SphereBlox logo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#0ea5a4"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="20" fill="#021018"/>
+  <g transform="translate(20,20)">
+    <circle cx="40" cy="40" r="28" fill="url(#g)"/>
+    <path d="M10 60 C30 40, 50 40, 70 60" stroke="#021018" stroke-width="6" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>
